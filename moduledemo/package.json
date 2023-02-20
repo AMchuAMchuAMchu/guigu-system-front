@@ -1,5 +1,5 @@
 {
-  "name": "npmdemo",
+  "name": "moduledemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.6.3"
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
   }
 }
