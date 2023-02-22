@@ -3,11 +3,11 @@ import request from '@/utils/request'
 const api_name = '/admin/system/sysRole/'
 
 export default {
-  getPageList(page,limit,searchObj) {
+  getPageList(page, limit, searchObj) {
     return request({
       url: `${api_name}/${page}/${limit}`,
       method: 'get',
-      params:searchObj
+      params: searchObj
     })
   },
   removeId(id) {
@@ -21,7 +21,7 @@ export default {
     return request({
       url: `${api_name}/save`,
       method: 'post',
-      data:role
+      data: role
     })
   },
 
@@ -36,18 +36,32 @@ export default {
     return request({
       url: `${api_name}/update`,
       method: 'post',
-      data:role
+      data: role
     })
   },
   batchRemove(idList) {
     return request({
       url: `${api_name}/batchRemove`,
       method: 'delete',
-      data:idList
+      data: idList
+    })
+  },
+  //根据用户id查询用户已分配的角色
+  getRolesByUserId(userId) {
+    return request({
+      url: `${api_name}/toAssign/${userId}`,
+      method: 'get'
     })
   },
 
-
+//分配角色
+  assignRoles(assginRoleVo) {
+    return request({
+      url: `${api_name}/doAssign`,
+      method: 'post',
+      data: assginRoleVo
+    })
+  }
 
 
 }
