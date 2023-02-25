@@ -91,7 +91,7 @@ export const constantRoutes = [
           title: '角色授权'
         },
         hidden: true,
-      }
+      },
     ]
   },
 
